@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Implexo Dental System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,600&family=Syne:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-logo"><a href="index.html" style="text-decoration:none;color:inherit;">Implexo<em> Dental System</em></a></div>
+    <div class="nav-links">
+      <a href="index.html" style="display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-weight:500;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Torna alla home
+      </a>
+      <a href="studio.html" id="studioNavLink" style="color:var(--blue);font-weight:600;border-bottom:2px solid var(--blue);padding-bottom:2px;">Il mio studio</a>
+    </div>
+  </nav>
+
+  <main id="studio-page" style="display:block;min-height:calc(100vh - 64px);background:#f4f6f9;">
+
+    <!-- Studio Hero / Tab Bar -->
+    <div class="studio-hero">
+      <div class="studio-hero-inner">
+        <div class="studio-welcome">Area riservata</div>
+        <div class="studio-title">Il mio <em>studio</em></div>
+        <div class="studio-sub">Gestisci KPI, pagamenti, calendario e supporto in un unico posto.</div>
+        <div class="studio-tabs">
+          <button class="studio-tab active" onclick="switchPanel('kpi',this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            Analytics & KPI
+          </button>
+          <button class="studio-tab" onclick="switchPanel('payments',this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Pagamenti
+          </button>
+          <button class="studio-tab" onclick="switchPanel('calendar',this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Calendario
+          </button>
+          <button class="studio-tab" onclick="switchPanel('support',this)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Supporto
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── KPI Panel ── -->
+    <div class="studio-body">
+    <div id="panel-kpi" class="studio-panel active">
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-badge blue">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="kpi-card-label">Lead del mese</div>
+          <div class="kpi-card-value">47</div>
+          <div class="kpi-delta up">↑ +12 vs mese scorso</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-badge green">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div class="kpi-card-label">Tasso conversione</div>
+          <div class="kpi-card-value">34<span>%</span></div>
+          <div class="kpi-delta up">↑ +4.2% vs media</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-badge teal">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="kpi-card-label">Appuntamenti</div>
+          <div class="kpi-card-value">16</div>
+          <div class="kpi-delta up">↑ +3 questa settimana</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-badge orange">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="kpi-card-label">Ricavo stimato</div>
+          <div class="kpi-card-value">24<span>k€</span></div>
+          <div class="kpi-delta up">↑ +38% vs mese scorso</div>
+        </div>
+      </div>
+
+      <div class="kpi-charts-row">
+        <div class="kpi-chart-card">
+          <div class="kpi-chart-title">Lead generati — ultimi 6 mesi</div>
+          <div class="kpi-chart-sub">Aggiornato in tempo reale via GoHighLevel</div>
+          <div class="mini-bar-chart">
+            <div class="mini-bar" style="height:45%"></div>
+            <div class="mini-bar" style="height:58%"></div>
+            <div class="mini-bar" style="height:52%"></div>
+            <div class="mini-bar" style="height:72%"></div>
+            <div class="mini-bar" style="height:63%"></div>
+            <div class="mini-bar current" style="height:100%"></div>
+          </div>
+          <div class="mini-bar-label">
+            <span>Nov</span><span>Dic</span><span>Gen</span><span>Feb</span><span>Mar</span><span>Apr</span>
+          </div>
+          <div class="ghl-badge">
+            <div class="ghl-dot connected"></div>
+            GoHighLevel — connesso
+          </div>
+        </div>
+        <div class="kpi-chart-card">
+          <div class="kpi-chart-title">Pipeline pazienti</div>
+          <div class="kpi-chart-sub">Stato attuale dei lead in CRM</div>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px;"><span style="color:var(--muted);">Nuovi lead</span><span style="font-weight:700;color:var(--ink);">47</span></div>
+              <div style="height:6px;background:var(--border);border-radius:3px;"><div style="height:100%;width:100%;background:var(--blue);border-radius:3px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px;"><span style="color:var(--muted);">Appuntamento fissato</span><span style="font-weight:700;color:var(--ink);">28</span></div>
+              <div style="height:6px;background:var(--border);border-radius:3px;"><div style="height:100%;width:60%;background:var(--teal);border-radius:3px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px;"><span style="color:var(--muted);">Convertiti</span><span style="font-weight:700;color:var(--ink);">16</span></div>
+              <div style="height:6px;background:var(--border);border-radius:3px;"><div style="height:100%;width:34%;background:var(--green);border-radius:3px;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kpi-chart-card">
+        <div class="kpi-chart-title">Cronologia pazienti recenti</div>
+        <div class="kpi-chart-sub">Ultimi 5 contatti dal sistema GHL</div>
+        <table class="patient-table" style="margin-top:12px;">
+          <thead>
+            <tr>
+              <th>Paziente</th>
+              <th>Trattamento</th>
+              <th>Data contatto</th>
+              <th>Valore stimato</th>
+              <th>Stato</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Mario R.</td><td>Implantologia full arch</td><td>17 Apr 2025</td><td>€ 14.800</td><td><span class="pt-status converted">✓ Convertito</span></td></tr>
+            <tr><td>Laura B.</td><td>Ortodonzia invisibile</td><td>16 Apr 2025</td><td>€ 4.200</td><td><span class="pt-status pending">⏳ Appuntamento</span></td></tr>
+            <tr><td>Giovanni F.</td><td>Faccette ceramica</td><td>15 Apr 2025</td><td>€ 6.500</td><td><span class="pt-status new">Nuovo lead</span></td></tr>
+            <tr><td>Sara M.</td><td>Impianto singolo</td><td>14 Apr 2025</td><td>€ 2.900</td><td><span class="pt-status converted">✓ Convertito</span></td></tr>
+            <tr><td>Andrea C.</td><td>Protesi su impianti</td><td>13 Apr 2025</td><td>€ 9.200</td><td><span class="pt-status pending">⏳ Appuntamento</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- ── Payments Panel ── -->
+    <div id="panel-payments" class="studio-panel">
+      <div class="pay-grid">
+
+        <div class="pay-card">
+          <div class="pay-section-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            Piano attivo
+          </div>
+          <span class="plan-badge">● Attivo</span>
+          <div class="plan-name">Percorso A — Core</div>
+          <div class="plan-price">1.497 <span>€/mese</span></div>
+          <ul class="plan-features">
+            <li>Sistema acquisizione pazienti completo</li>
+            <li>CRM GoHighLevel incluso</li>
+            <li>Gestione lead e follow-up automatico</li>
+            <li>Dashboard KPI in tempo reale</li>
+            <li>Supporto dedicato mensile</li>
+            <li>Calendario appuntamenti integrato</li>
+          </ul>
+          <div class="plan-renew">Prossimo rinnovo: <strong>19 Maggio 2025</strong></div>
+          <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;">
+            <button class="btn-primary" onclick="alert('Upgrade piano — integrazione Stripe')">Upgrade piano →</button>
+            <button class="btn-outline" onclick="alert('Gestione sottoscrizione — Stripe Portal')">Gestisci abbonamento</button>
+          </div>
+        </div>
+
+        <div class="pay-card">
+          <div class="pay-section-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Metodi di pagamento
+          </div>
+          <div class="stripe-card-item default">
+            <div class="card-icon">VISA</div>
+            <div class="card-info">
+              <div class="card-name">•••• •••• •••• 4242</div>
+              <div class="card-exp">Scade 08/2027</div>
+            </div>
+            <span class="card-default-badge">Predefinita</span>
+          </div>
+          <div class="stripe-card-item">
+            <div class="card-icon" style="background:#1a1f71;font-size:8px;">MC</div>
+            <div class="card-info">
+              <div class="card-name">•••• •••• •••• 8113</div>
+              <div class="card-exp">Scade 03/2026</div>
+            </div>
+          </div>
+          <button class="btn-outline" style="width:100%;justify-content:center;margin-top:4px;" onclick="alert('Aggiungi carta — integrazione Stripe Elements')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Aggiungi carta
+          </button>
+          <div class="stripe-powered">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Pagamenti protetti via <strong style="color:var(--ink);margin-left:3px;">Stripe</strong>
+          </div>
+        </div>
+
+        <div class="pay-card pay-card-full">
+          <div class="pay-section-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Storico fatture
+          </div>
+          <div class="invoice-row"><span class="invoice-date">19 Mar 2025</span><span>Percorso A — Mensile</span><span class="invoice-amt">€ 1.497,00</span><span class="invoice-status">Pagato</span><button class="btn-outline" style="padding:5px 12px;font-size:11px;" onclick="alert('Download PDF fattura')">PDF</button></div>
+          <div class="invoice-row"><span class="invoice-date">19 Feb 2025</span><span>Percorso A — Mensile</span><span class="invoice-amt">€ 1.497,00</span><span class="invoice-status">Pagato</span><button class="btn-outline" style="padding:5px 12px;font-size:11px;" onclick="alert('Download PDF fattura')">PDF</button></div>
+          <div class="invoice-row"><span class="invoice-date">19 Gen 2025</span><span>Percorso A — Mensile</span><span class="invoice-amt">€ 1.497,00</span><span class="invoice-status">Pagato</span><button class="btn-outline" style="padding:5px 12px;font-size:11px;" onclick="alert('Download PDF fattura')">PDF</button></div>
+          <div class="invoice-row"><span class="invoice-date">19 Dic 2024</span><span>Setup iniziale + Onboarding</span><span class="invoice-amt">€ 997,00</span><span class="invoice-status">Pagato</span><button class="btn-outline" style="padding:5px 12px;font-size:11px;" onclick="alert('Download PDF fattura')">PDF</button></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Calendar Panel ── -->
+    <div id="panel-calendar" class="studio-panel">
+      <div class="cal-layout">
+        <div class="cal-sidebar">
+          <div class="cal-card">
+            <div class="cal-month-header">
+              <div class="cal-month-title">Aprile 2025</div>
+              <div style="display:flex;gap:6px;">
+                <button class="cal-nav-btn">‹</button>
+                <button class="cal-nav-btn">›</button>
+              </div>
+            </div>
+            <div class="cal-grid">
+              <div class="cal-dow">Lu</div><div class="cal-dow">Ma</div><div class="cal-dow">Me</div>
+              <div class="cal-dow">Gi</div><div class="cal-dow">Ve</div><div class="cal-dow">Sa</div><div class="cal-dow">Do</div>
+              <div class="cal-day other-month">31</div>
+              <div class="cal-day">1</div><div class="cal-day has-appt">2</div><div class="cal-day">3</div>
+              <div class="cal-day has-appt">4</div><div class="cal-day">5</div><div class="cal-day">6</div>
+              <div class="cal-day has-appt">7</div><div class="cal-day">8</div><div class="cal-day">9</div>
+              <div class="cal-day has-appt">10</div><div class="cal-day">11</div><div class="cal-day">12</div><div class="cal-day">13</div>
+              <div class="cal-day">14</div><div class="cal-day has-appt">15</div><div class="cal-day">16</div>
+              <div class="cal-day has-appt">17</div><div class="cal-day">18</div><div class="cal-day today has-appt">19</div><div class="cal-day">20</div>
+              <div class="cal-day">21</div><div class="cal-day has-appt">22</div><div class="cal-day">23</div>
+              <div class="cal-day has-appt">24</div><div class="cal-day">25</div><div class="cal-day">26</div><div class="cal-day">27</div>
+              <div class="cal-day">28</div><div class="cal-day has-appt">29</div><div class="cal-day">30</div>
+              <div class="cal-day other-month">1</div><div class="cal-day other-month">2</div><div class="cal-day other-month">3</div><div class="cal-day other-month">4</div>
+            </div>
+          </div>
+          <div class="cal-card">
+            <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:14px;">Prossimi appuntamenti</div>
+            <div class="upcoming-list">
+              <div class="upcoming-item"><div class="upcoming-time">10:00</div><div><div class="upcoming-name">Mario Rossi</div><div class="upcoming-type">Prima visita implantologia</div></div></div>
+              <div class="upcoming-item"><div class="upcoming-time">11:30</div><div><div class="upcoming-name">Laura Bianchi</div><div class="upcoming-type">Consulenza ortodonzia</div></div></div>
+              <div class="upcoming-item"><div class="upcoming-time">14:00</div><div><div class="upcoming-name">Giovanni Ferrari</div><div class="upcoming-type">Valutazione faccette</div></div></div>
+              <div class="upcoming-item"><div class="upcoming-time">16:30</div><div><div class="upcoming-name">Sara Mori</div><div class="upcoming-type">Follow-up impianto</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cal-main-card">
+          <div class="cal-day-header">
+            <div class="cal-day-title">Sabato 19 Aprile — Agenda</div>
+            <button class="btn-primary" onclick="alert('Nuovo appuntamento — sistema integrato')">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Nuovo appuntamento
+            </button>
+          </div>
+          <div style="margin-bottom:28px;">
+            <div class="timeline-slot"><div class="slot-time">09:00</div><div class="slot-appt empty">Nessun appuntamento</div></div>
+            <div class="timeline-slot"><div class="slot-time">10:00</div><div class="slot-appt blue"><div class="slot-appt-name">Mario Rossi</div><div class="slot-appt-type">Prima visita implantologia · 60 min</div></div></div>
+            <div class="timeline-slot"><div class="slot-time">11:00</div><div class="slot-appt empty">Nessun appuntamento</div></div>
+            <div class="timeline-slot"><div class="slot-time">11:30</div><div class="slot-appt teal"><div class="slot-appt-name">Laura Bianchi</div><div class="slot-appt-type">Consulenza ortodonzia · 45 min</div></div></div>
+            <div class="timeline-slot"><div class="slot-time">12:30</div><div class="slot-appt empty">Pausa pranzo</div></div>
+            <div class="timeline-slot"><div class="slot-time">14:00</div><div class="slot-appt blue"><div class="slot-appt-name">Giovanni Ferrari</div><div class="slot-appt-type">Valutazione faccette ceramica · 30 min</div></div></div>
+            <div class="timeline-slot"><div class="slot-time">15:00</div><div class="slot-appt empty">Nessun appuntamento</div></div>
+            <div class="timeline-slot"><div class="slot-time">16:30</div><div class="slot-appt teal"><div class="slot-appt-name">Sara Mori</div><div class="slot-appt-type">Follow-up impianto · 30 min</div></div></div>
+          </div>
+          <div class="cal-placeholder-msg" style="padding:32px 0 0;border-top:1px solid var(--border);">
+            <div class="cal-placeholder-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="cal-ph-title">Software calendario integrato</div>
+            <div class="cal-ph-body">Questo modulo è progettato per sostituire il sistema di gestione appuntamenti attualmente in uso nel tuo studio, integrandosi direttamente con il nostro ecosistema di acquisizione pazienti.</div>
+            <div class="cal-feature-pills">
+              <span class="cal-pill">Sync automatico con GHL</span>
+              <span class="cal-pill">Reminder SMS & email</span>
+              <span class="cal-pill">Booking online</span>
+              <span class="cal-pill">Reportistica mensile</span>
+              <span class="cal-pill">Multi-operatore</span>
+            </div>
+            <button class="btn-primary" onclick="alert('Attivazione sistema calendario — coming soon')">Attiva il sistema completo →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Support Panel ── -->
+    <div id="panel-support" class="studio-panel">
+      <div class="support-grid">
+        <div class="chat-container">
+          <div class="chat-header">
+            <div class="chat-avatar">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+            <div>
+              <div class="chat-info-name">Assistente Implexo AI</div>
+              <div class="chat-info-status">● Online — risposta immediata</div>
+            </div>
+            <div style="margin-left:auto;">
+              <div class="ghl-badge" style="margin-top:0;">
+                <div class="ghl-dot connected"></div>
+                GHL connesso
+              </div>
+            </div>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+            <div class="msg-row ai">
+              <div class="msg-avatar ai">AI</div>
+              <div>
+                <div class="msg-bubble">Ciao! Sono l'assistente di Implexo Dental System. Come posso aiutarti oggi? Posso rispondere a domande sul tuo piano, sui lead, sugli appuntamenti o sul funzionamento del sistema. 👋</div>
+                <div class="msg-time">09:00</div>
+              </div>
+            </div>
+            <div class="msg-row ai">
+              <div class="msg-avatar ai">AI</div>
+              <div>
+                <div class="msg-bubble">Puoi anche chiedermi di collegare il tuo team di supporto se hai bisogno di assistenza personalizzata.</div>
+                <div class="msg-time">09:00</div>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input-area">
+            <textarea class="chat-input" id="chatInput" placeholder="Scrivi un messaggio..." rows="1" onkeydown="handleChatKey(event)"></textarea>
+            <button class="chat-send" onclick="sendChatMessage()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div class="escalation-card">
+            <div>
+              <div class="escalation-title">Hai bisogno di supporto umano?</div>
+              <div class="escalation-desc">Se l'assistente AI non riesce a risolvere il tuo problema, puoi contattare direttamente il nostro team.</div>
+            </div>
+            <div class="support-status-row">
+              <div class="support-dot"></div>
+              Team disponibile · Lun–Ven 9:00–18:00
+            </div>
+            <div class="escalation-option" onclick="alert('Prenotazione chiamata — integrazione calendario GHL')">
+              <div class="esc-icon blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.21 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="esc-name">Prenota una chiamata</div>
+                <div class="esc-desc">Scegli un orario disponibile e ti richiamiamo noi. Risposta garantita entro 2 ore.</div>
+              </div>
+            </div>
+            <div class="escalation-option" onclick="escalateToHuman()">
+              <div class="esc-icon green">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div>
+                <div class="esc-name">Passa a un operatore</div>
+                <div class="esc-desc">Trasferisci questa chat a un membro del team Implexo in tempo reale.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="escalation-card" style="gap:12px;">
+            <div class="escalation-title" style="margin-bottom:0;">Domande frequenti</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div class="escalation-option" style="padding:12px;" onclick="askFaq('Come posso vedere i miei lead del mese?')">
+                <div style="font-size:13px;color:var(--ink);font-weight:500;">Come vedo i lead del mese?</div>
+              </div>
+              <div class="escalation-option" style="padding:12px;" onclick="askFaq('Come funziona il tasso di conversione?')">
+                <div style="font-size:13px;color:var(--ink);font-weight:500;">Come funziona la conversione?</div>
+              </div>
+              <div class="escalation-option" style="padding:12px;" onclick="askFaq('Come posso modificare il mio piano di abbonamento?')">
+                <div style="font-size:13px;color:var(--ink);font-weight:500;">Come modifico il mio piano?</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div><!-- /studio-body -->
+  </main><!-- /studio-page -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Implexo<em> Dental System</em></div>
+    <p>© 2025 Implexo Dental System Srl · <a href="#">Privacy</a> · <a href="#">Termini</a> · GDPR compliant</p>
+  </footer>
+
+  <script>
+    /* ── MOBILE MENU ── */
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const ham = document.getElementById('hamburger');
+      menu.classList.toggle('open');
+      ham.classList.toggle('open');
+    }
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    }
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const ham = document.getElementById('hamburger');
+      if (!menu.contains(e.target) && !ham.contains(e.target)) {
+        menu.classList.remove('open');
+        ham.classList.remove('open');
+      }
+    });
+
+    /* ── STUDIO PANEL TABS ── */
+    function switchPanel(name, btn) {
+      document.querySelectorAll('.studio-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.studio-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById('panel-' + name).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    /* ── AI CHAT ── */
+    const aiResponses = {
+      'lead': 'I tuoi lead del mese sono visibili nella sezione Analytics & KPI. Questo mese hai generato <strong>47 lead</strong>, un incremento del +12 rispetto al mese precedente. I dati sono sincronizzati in tempo reale da GoHighLevel.',
+      'conversione': 'Il tuo tasso di conversione attuale è del <strong>34%</strong>, superiore alla media del sistema (+4.2%). Significa che su 47 lead, circa 16 si convertono in pazienti. Puoi migliorarlo ottimizzando il follow-up automatico.',
+      'piano': 'Sei attualmente nel <strong>Percorso A — Core</strong> a €1.497/mese. Puoi gestire il tuo abbonamento, cambiare piano o aggiornare il metodo di pagamento nella sezione Pagamenti.',
+      'calendario': 'Il calendario integrato ti permette di gestire gli appuntamenti direttamente dalla piattaforma, con sincronizzazione automatica con GoHighLevel e reminder automatici per i pazienti.',
+      'supporto': 'Puoi contattarci tramite questa chat, prenotare una chiamata o parlare direttamente con un operatore. Il nostro team è disponibile Lun–Ven 9:00–18:00.',
+      'default': 'Grazie per la tua domanda! Il nostro team di supporto può aiutarti con dettagli specifici. Vuoi che ti metta in contatto con un operatore o preferisci prenotare una chiamata?'
+    };
+
+    function getAiResponse(msg) {
+      const m = msg.toLowerCase();
+      if (m.includes('lead') || m.includes('pazienti') || m.includes('contatti')) return aiResponses.lead;
+      if (m.includes('conversione') || m.includes('conversion') || m.includes('tasso')) return aiResponses.conversione;
+      if (m.includes('piano') || m.includes('abbonamento') || m.includes('pagamento') || m.includes('stripe')) return aiResponses.piano;
+      if (m.includes('calendario') || m.includes('appuntamento') || m.includes('agenda')) return aiResponses.calendario;
+      if (m.includes('supporto') || m.includes('aiuto') || m.includes('team')) return aiResponses.supporto;
+      return aiResponses.default;
+    }
+
+    function addMessage(text, isUser) {
+      const msgs = document.getElementById('chatMessages');
+      const now = new Date().toLocaleTimeString('it-IT', {hour:'2-digit',minute:'2-digit'});
+      const row = document.createElement('div');
+      row.className = 'msg-row ' + (isUser ? 'user' : 'ai');
+      row.innerHTML = `
+        <div class="msg-avatar ${isUser?'user':'ai'}">${isUser?'TU':'AI'}</div>
+        <div>
+          <div class="msg-bubble">${text}</div>
+          <div class="msg-time">${now}</div>
+        </div>`;
+      msgs.appendChild(row);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    function addTyping() {
+      const msgs = document.getElementById('chatMessages');
+      const row = document.createElement('div');
+      row.className = 'msg-row ai';
+      row.id = 'typingRow';
+      row.innerHTML = `<div class="msg-avatar ai">AI</div><div class="msg-bubble" style="padding:14px 15px;"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
+      msgs.appendChild(row);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    function sendChatMessage() {
+      const input = document.getElementById('chatInput');
+      const msg = input.value.trim();
+      if (!msg) return;
+      addMessage(msg, true);
+      input.value = '';
+      addTyping();
+      setTimeout(() => {
+        const typing = document.getElementById('typingRow');
+        if (typing) typing.remove();
+        addMessage(getAiResponse(msg), false);
+      }, 1200 + Math.random() * 600);
+    }
+
+    function handleChatKey(e) {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChatMessage(); }
+    }
+
+    function askFaq(q) {
+      document.getElementById('chatInput').value = q;
+      sendChatMessage();
+    }
+
+    function escalateToHuman() {
+      addMessage('Sto trasferendo la chat a un operatore umano...', false);
+      setTimeout(() => {
+        addMessage('✓ Un membro del team Implexo si connetterà a breve. Tempo di attesa stimato: <strong>2–5 minuti</strong>. Puoi continuare a scrivere nel frattempo.', false);
+      }, 1500);
+    }
+  </script>
+</body>
+
+</html>
