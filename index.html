@@ -1,593 +1,354 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="no-js">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Implexo Dental System</title>
+  <meta name="description"
+    content="Implexo Dental System porta pazienti ad alto valore negli studi dentistici con un sistema proprietario, misurabile e senza carico operativo.">
+  <meta name="theme-color" content="#0b1824">
+  <title>Implexo Dental System — Acquisizione pazienti per studi dentistici</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,600&family=Syne:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.className = 'js';</script>
 </head>
 
 <body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 
-  <nav>
-    <div class="nav-logo"><a href="index.html" style="text-decoration:none;color:inherit;">Implexo<em> Dental
-          System</em></a></div>
-    <div class="nav-links">
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Navigazione principale">
+      <a class="brand" href="#home" aria-label="Implexo Dental System — Home">
+        <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true">
+          <path d="M7 14.5c4.8-5 9.8-7.5 15-7.5s10.2 2.5 15 7.5" />
+          <path d="M10 20.5c3.8 10.8 7.8 16.2 12 16.2s8.2-5.4 12-16.2" />
+          <path d="M22 7v29.7" />
+        </svg>
+        <span class="brand-copy">
+          <strong>Implexo</strong>
+          <span>Dental System</span>
+        </span>
+      </a>
+
+      <div class="nav-links" aria-label="Sezioni del sito">
+        <a href="#problemi">Il problema</a>
+        <a href="#percorsi">I percorsi</a>
+        <a href="#risultati">Risultati</a>
+        <a href="#contatto" class="button button-small button-dark">Richiedi un'analisi gratuita</a>
+      </div>
+
+      <button class="nav-hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu"
+        aria-label="Apri il menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <a href="#problemi">Il problema</a>
       <a href="#percorsi">I percorsi</a>
       <a href="#risultati">Risultati</a>
-      <a href="studio.html" id="studioNavLink" style="color:var(--blue);font-weight:600;">Il mio studio</a>
-      <a href="#contatto" class="nav-btn">Richiedi un'analisi gratuita</a>
+      <a href="#contatto" class="button button-dark">Richiedi un'analisi gratuita</a>
     </div>
-    <button class="nav-hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  </header>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#problemi" onclick="closeMobileMenu()">Il problema</a>
-    <a href="#percorsi" onclick="closeMobileMenu()">I percorsi</a>
-    <a href="#risultati" onclick="closeMobileMenu()">Risultati</a>
-    <a href="studio.html" class="mobile-studio-link" onclick="closeMobileMenu()">Il mio studio</a>
-    <a href="#contatto" class="mobile-cta" onclick="closeMobileMenu()">Richiedi un'analisi gratuita</a>
-  </div>
-
-  <div id="main-site">
-
-    <!-- ══════════════════════════════
-     HERO
-════════════════════════════════ -->
+  <main id="contenuto">
     <section class="hero" id="home">
-      <div class="hero-grid"></div>
-      <div class="hero-gradient"></div>
-
-      <div class="hero-inner">
-        <span class="hero-tag">Sistema proprietario di acquisizione pazienti</span>
-
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Sistema proprietario di acquisizione pazienti</span>
         <h1>
           ti portiamo<br>
           direttamente in poltrona<br>
           <em>pazienti ad alto valore, ogni mese</em>
         </h1>
-
         <p class="hero-sub">
           Un sistema completo per portare pazienti ad alto valore nel tuo studio —
           progettato per studi dentistici che vogliono sbloccare il vero potenziale del proprio studio
         </p>
-
-        <a href="#contatto" class="hero-cta">
+        <a href="#contatto" class="button button-primary button-large">
           Richiedi un'analisi gratuita del tuo studio
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </a>
+        <div class="hero-note">
+          <span class="pulse" aria-hidden="true"></span>
+          Accettiamo un numero limitato di studi per area geografica.
+        </div>
       </div>
 
-      <div class="hero-scroll">
-        <div class="hero-scroll-line"></div>
+      <figure class="hero-media reveal reveal-delay">
+        <img src="assets/implexo-clinic-editorial.png"
+          alt="Team odontoiatrico che analizza un piano di trattamento in una clinica contemporanea" width="1536"
+          height="1024" fetchpriority="high">
+        <figcaption>
+          <span>01 / Sistema in azione</span>
+          <strong>Strategia. Qualificazione. Agenda.</strong>
+        </figcaption>
+        <div class="hero-seal" aria-hidden="true">
+          <span>IDS</span>
+          <small>Metodo proprietario</small>
+        </div>
+      </figure>
+    </section>
+
+    <section class="stats-section" aria-label="Risultati del sistema">
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-num">340<span>+</span></div>
+          <div class="stat-label">Studi attivi nel sistema</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">47</div>
+          <div class="stat-label">Studi nati con noi</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span>+</span>38<span>%</span></div>
+          <div class="stat-label">Fatturato medio nei primi 90 giorni*</div>
+        </div>
+      </div>
+      <p class="stats-note">*dato medio su studi attivi nel sistema Implexo Dental System</p>
+    </section>
+
+    <section class="diagnostic-section section-shell" id="problemi">
+      <div class="section-index" aria-hidden="true">01</div>
+      <div class="diagnostic-heading reveal">
+        <span class="eyebrow">Il problema</span>
+        <h2 class="section-title">Ti riconosci<br>in qualcuno<br>di questi?</h2>
+      </div>
+
+      <div class="problems-list reveal">
+        <div class="problem-item"><span class="problem-num">01</span><span class="problem-text">L'agenda ha buchi — e non hai un sistema per riempirli in modo prevedibile</span></div>
+        <div class="problem-item"><span class="problem-num">02</span><span class="problem-text">hai investito in marketing generico senza ottenere nessun risultato.</span></div>
+        <div class="problem-item"><span class="problem-num">03</span><span class="problem-text">Dipendi dal passaparola — funzionava 20 anni fa, ora le persone cercano online, e trovano i tuoi concorrenti.</span></div>
+        <div class="problem-item"><span class="problem-num">04</span><span class="problem-text">Arrivano pazienti, ma non quelli ad alto valore — e non sai come cambiar rotta</span></div>
+        <div class="problem-item"><span class="problem-num">05</span><span class="problem-text">i pazienti sono sempre gli stessi da troppo tempo.</span></div>
+        <div class="problem-item"><span class="problem-num">06</span><span class="problem-text">ci sono troppi studi nella tua zona e non riesci ad ottenere visibilità.</span></div>
+      </div>
+
+      <div class="solution-panel reveal">
+        <span class="eyebrow eyebrow-light">La soluzione</span>
+        <h2 class="section-title section-title-light">L'agenda piena.<br>Il controllo.<br>I pazienti giusti.</h2>
+        <div class="solution-copy">
+          <h3>La risposta diretta a ciò che non funziona.</h3>
+          <p>Se l'agenda è imprevedibile, te la rendiamo prevedibile. Se dipendi dal passaparola, costruiamo un flusso costante che non dipende da nessuno. Se arrivano pazienti di basso valore, selezioniamo quelli ad alto valore al posto tuo.</p>
+          <p>Tu continui a fare il dentista. Il sistema fa tutto il resto — in modo controllato, misurabile, senza che tu debba gestire nulla.</p>
+        </div>
+        <div class="solution-tags" aria-label="Benefici del sistema">
+          <span>Agenda prevedibile</span><span>Pazienti selezionati</span><span>Flusso costante</span><span>Zero carico operativo</span>
+        </div>
+        <a href="#risultati" class="text-link text-link-light">solo parole? Fattelo dire da chi lo ha già provato <span aria-hidden="true">↘</span></a>
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-     STATS BAR
-════════════════════════════════ -->
-    <div class="stats-bar">
-      <div class="stat-item">
-        <div class="stat-num">340<span>+</span></div>
-        <div class="stat-label">Studi attivi nel sistema</div>
+    <section class="paths-section section-shell" id="percorsi">
+      <div class="section-index" aria-hidden="true">02</div>
+      <header class="paths-header reveal">
+        <span class="eyebrow">Due punti di accesso, un sistema</span>
+        <h2 class="section-title">Da dove parti<br>tu, oggi?</h2>
+        <p class="section-body">Il sistema è uno solo — prevedibile, controllato, misurabile. L'ingresso dipende da dove sei. Scegli il percorso giusto: arriverai nello stesso posto.</p>
+      </header>
+
+      <div class="paths-grid">
+        <article class="path-card path-card-core reveal">
+          <div class="path-topline"><span class="path-label">Percorso A</span><span class="path-code">IDS / CORE</span></div>
+          <h3 class="path-title">Sistema di crescita<br>per studi già avviati.</h3>
+          <p class="path-desc">Hai già struttura e pazienti. Il problema è che la crescita non è prevedibile né controllata. Lo cambiamo.</p>
+          <ul class="path-features">
+            <li>Accesso immediato al sistema completo</li>
+            <li>Selezione di pazienti ad alto valore per il tuo studio</li>
+            <li>Appuntamenti fissati direttamente in agenda dal nostro team</li>
+            <li>aumento del fatturato del 38% nei primi 90 giorni</li>
+            <li>Esclusività territoriale garantita</li>
+          </ul>
+          <a href="#contatto" class="button button-light path-select" data-path="core">Richiedi un'analisi gratuita <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="path-card path-card-launch reveal reveal-delay">
+          <div class="path-topline"><span class="path-label">Percorso B</span><span class="path-code">IDS / LAUNCH</span></div>
+          <h3 class="path-title">Avvio guidato<br>con rischio zero.</h3>
+          <p class="path-desc">Stai aprendo o hai un'agenda instabile. Non hai budget da rischiare. Allora partiamo noi.</p>
+          <ul class="path-features">
+            <li>Investiamo direttamente nella tua crescita — senza costi iniziali per te</li>
+            <li>Tu inizi a pagare solo quando il tuo studio genera cassa</li>
+            <li>Selezione di pazienti studiata per riempire l'agenda rapidamente</li>
+            <li>Passaggio guidato al sistema completo quando sei pronto</li>
+            <li>Contratto strutturato — nessuna sorpresa</li>
+          </ul>
+          <div class="path-guarantee"><strong>Partiamo noi. Tu paghi solo quando il tuo studio è stabile.</strong><span>Il rischio è nostro. I risultati sono tuoi.</span></div>
+          <a href="#contatto" class="button button-mineral path-select" data-path="launch">Scopri se sei idoneo <span aria-hidden="true">↗</span></a>
+        </article>
       </div>
-      <div class="stat-item">
-        <div class="stat-num">47</div>
-        <div class="stat-label">Studi nati con noi</div>
+    </section>
+
+    <section class="system-section" id="sistema">
+      <div class="system-visual reveal">
+        <img src="assets/implexo-system-abstract.png" alt="Composizione astratta di materiali clinici che rappresenta un flusso misurabile" width="1536" height="1024" loading="lazy">
+        <div class="system-visual-label"><span>IDS / Operational layer</span><span>04 fasi coordinate</span></div>
       </div>
-      <div class="stat-item">
-        <div class="stat-num"><span>+</span>38<span>%</span></div>
-        <div class="stat-label">Fatturato medio nei primi 90 giorni*</div>
-      </div>
-    </div>
-    <div style="background:var(--ink);padding:6px 48px 14px;text-align:center;">
-      <span style="font-size:11px;color:rgba(255,255,255,0.25);letter-spacing:0.3px;">*dato medio su studi attivi nel
-        sistema Implexo Dental System</span>
-    </div>
 
-    <!-- ══════════════════════════════
-     PROBLEMA + SOLUZIONE
-════════════════════════════════ -->
-    <section class="problems-section" id="problemi">
-      <div class="section-inner">
-        <div class="problems-layout">
+      <div class="system-content reveal">
+        <span class="eyebrow eyebrow-light">Il sistema</span>
+        <h2 class="section-title section-title-light">Questo è ciò<br>che facciamo<br>per te.</h2>
+        <p class="section-body section-body-light">Quattro fasi. Nessun carico per il tuo studio. Solo pazienti pronti alla visita.</p>
 
-          <div>
-            <span class="eyebrow">Il problema</span>
-            <h2 class="section-title">Ti riconosci<br>in qualcuno<br>di questi?</h2>
-            <div class="problems-list fade-up">
-              <div class="problem-item">
-                <span class="problem-num">01</span>
-                <span class="problem-text">L'agenda ha buchi — e non hai un sistema per riempirli in modo
-                  prevedibile</span>
-              </div>
-              <div class="problem-item">
-                <span class="problem-num">02</span>
-                <span class="problem-text">hai investito in marketing generico senza ottenere nessun risultato.</span>
-              </div>
-              <div class="problem-item">
-                <span class="problem-num">03</span>
-                <span class="problem-text">Dipendi dal passaparola — funzionava 20 anni fa, ora le persone cercano
-                  online,
-                  e trovano i tuoi concorrenti.</span>
-              </div>
-              <div class="problem-item">
-                <span class="problem-num">04</span>
-                <span class="problem-text">Arrivano pazienti, ma non quelli ad alto valore — e non sai come cambiar
-                  rotta</span>
-              </div>
-              <div class="problem-item">
-                <span class="problem-num">05</span>
-                <span class="problem-text">i pazienti sono sempre gli stessi da troppo tempo.</span>
-              </div>
-              <div class="problem-item">
-                <span class="problem-num">06</span>
-                <span class="problem-text">ci sono troppi studi nella tua zona e non riesci ad ottenere
-                  visibilità.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="solution-side">
-            <span class="eyebrow">La soluzione</span>
-            <h2 class="section-title" style="margin-bottom:24px;">L'agenda piena.<br>Il controllo.<br>I pazienti giusti.
-            </h2>
-            <div class="solution-card fade-up fade-up-d1">
-              <h3>La risposta diretta a ciò che non funziona.</h3>
-              <p>
-                Se l'agenda è imprevedibile, te la rendiamo prevedibile.
-                Se dipendi dal passaparola, costruiamo un flusso costante
-                che non dipende da nessuno. Se arrivano pazienti di basso valore,
-                selezioniamo quelli ad alto valore al posto tuo.
-              </p>
-              <p>
-                Tu continui a fare il dentista.
-                Il sistema fa tutto il resto — in modo controllato,
-                misurabile, senza che tu debba gestire nulla.
-              </p>
-              <div class="solution-tags">
-                <span class="tag">Agenda prevedibile</span>
-                <span class="tag">Pazienti selezionati</span>
-                <span class="tag">Flusso costante</span>
-                <span class="tag">Zero carico operativo</span>
-              </div>
-            </div>
-            <a href="#risultati"
-              style="display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--ink);color:white;border-radius:8px;padding:16px 28px;font-family:'Syne',sans-serif;font-size:15px;font-weight:700;text-decoration:none;letter-spacing:0.2px;transition:background .2s;"
-              onmouseover="this.style.background='var(--blue)'" onmouseout="this.style.background='var(--ink)'">
-              solo parole? Fattelo dire da chi lo ha già provato
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-
+        <div class="system-steps">
+          <article class="system-step"><span>01</span><div><h3>Dominio Territoriale Strategico</h3><strong>Costruiamo una presenza dominante nel tuo territorio.</strong><p>Intercettiamo domanda ad alta intenzione nella tua zona, posizionando il tuo studio come il riferimento naturale per i trattamenti ad alto valore.</p></div></article>
+          <article class="system-step"><span>02</span><div><h3>Attrazione Filtrata</h3><strong>Selezioniamo solo pazienti coerenti con trattamenti ad alto valore.</strong><p>Attiviamo campagne che selezionano solo pazienti coerenti con trattamenti ad alto valore (implantologia, faccette, ortodonzia, filler ecc...)</p></div></article>
+          <article class="system-step"><span>03</span><div><h3>Qualificazione Invisibile</h3><strong>Il paziente viene preparato prima del contatto diretto.</strong><p>Filtriamo e pre-condizioniamo ogni paziente, riducendo attrito e obiezioni prima ancora che metta piede nel tuo studio.</p></div></article>
+          <article class="system-step system-step-accent"><span>04</span><div><h3>Conversione Clinica Guidata</h3><strong>Arriva in studio già predisposto.</strong><p>Il risultato è un aumento drastico dell'accettazione dei piani di cura e del valore medio per paziente — senza che tu debba fare nulla di diverso.</p></div></article>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-     DUAL PATH
-════════════════════════════════ -->
-    <section class="paths-section" id="percorsi">
-      <div class="section-inner">
+    <div class="system-manifesto"><p>Ogni fase è progettata per eliminare una delle principali inefficienze del marketing odontoiatrico tradizionale.</p></div>
 
-        <div class="paths-header fade-up">
-          <span class="eyebrow" style="display:block;text-align:center;">Due punti di accesso, un sistema</span>
-          <h2 class="section-title" style="text-align:center;">Da dove parti<br>tu, oggi?</h2>
-          <p class="section-body">
-            Il sistema è uno solo — prevedibile, controllato, misurabile.
-            L'ingresso dipende da dove sei. Scegli il percorso giusto:
-            arriverai nello stesso posto.
-          </p>
-        </div>
-
-        <div class="paths-grid">
-
-          <!-- PATH A — CORE -->
-          <div class="path-card path-card-core fade-up fade-up-d1">
-            <div class="path-deco"></div>
-            <span class="path-label">Percorso A</span>
-            <h3 class="path-title">Sistema di crescita<br>per studi già avviati.</h3>
-            <p class="path-desc">
-              Hai già struttura e pazienti. Il problema è che la crescita
-              non è prevedibile né controllata. Lo cambiamo.
-            </p>
-            <ul class="path-features">
-              <li>Accesso immediato al sistema completo</li>
-              <li>Selezione di pazienti ad alto valore per il tuo studio</li>
-              <li>Appuntamenti fissati direttamente in agenda dal nostro team</li>
-              <li>aumento del fatturato del 38% nei primi 90 giorni</li>
-              <li>Esclusività territoriale garantita</li>
-            </ul>
-            <a href="#contatto" class="path-cta" onclick="selectPath('core')">
-              Richiedi un'analisi gratuita
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-
-          <!-- PATH B — LAUNCH -->
-          <div class="path-card path-card-launch fade-up fade-up-d2">
-            <div class="path-deco"></div>
-            <span class="path-label">Percorso B</span>
-            <h3 class="path-title" style="color:var(--ink);">Avvio guidato<br>con rischio zero.</h3>
-            <p class="path-desc">
-              Stai aprendo o hai un'agenda instabile. Non hai budget da rischiare.
-              Allora partiamo noi.
-            </p>
-            <ul class="path-features">
-              <li>Investiamo direttamente nella tua crescita — senza costi iniziali per te</li>
-              <li>Tu inizi a pagare solo quando il tuo studio genera cassa</li>
-              <li>Selezione di pazienti studiata per riempire l'agenda rapidamente</li>
-              <li>Passaggio guidato al sistema completo quando sei pronto</li>
-              <li>Contratto strutturato — nessuna sorpresa</li>
-            </ul>
-            <div class="path-guarantee" style="font-weight:600;">
-              Partiamo noi. Tu paghi solo quando il tuo studio è stabile.<br>
-              <span style="font-weight:400;opacity:0.8;">Il rischio è nostro. I risultati sono tuoi.</span>
-            </div>
-            <a href="#contatto" class="path-cta" onclick="selectPath('launch')">
-              Scopri se sei idoneo
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-
-        </div>
-
-
-
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════
-     HOW IT WORKS
-════════════════════════════════ -->
-    <section class="how-section">
-      <div class="section-inner">
-        <div class="how-layout">
-
-          <div>
-            <span class="eyebrow">Il sistema</span>
-            <h2 class="section-title">Questo è ciò<br>che facciamo<br>per te.</h2>
-            <p class="section-body" style="margin-top:16px;">
-              Quattro fasi. Nessun carico per il tuo studio.
-              Solo pazienti pronti alla visita.
-            </p>
-          </div>
-
-          <div class="fade-up" style="display:flex;flex-direction:column;gap:16px;">
-
-            <div
-              style="background:white;border:1px solid var(--border);border-radius:12px;padding:32px 28px;border-left:3px solid var(--blue);">
-              <div
-                style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">
-                01 — Dominio Territoriale Strategico</div>
-              <p style="font-size:17px;font-weight:600;color:var(--ink);line-height:1.4;margin-bottom:10px;">Costruiamo
-                una presenza dominante nel tuo territorio.</p>
-              <p style="font-size:14px;color:var(--muted);line-height:1.7;">Intercettiamo domanda ad alta intenzione
-                nella
-                tua zona, posizionando il tuo studio come il riferimento naturale per i trattamenti ad alto valore.</p>
-            </div>
-
-            <div
-              style="background:white;border:1px solid var(--border);border-radius:12px;padding:32px 28px;border-left:3px solid var(--blue);">
-              <div
-                style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">
-                02 — Attrazione Filtrata</div>
-              <p style="font-size:17px;font-weight:600;color:var(--ink);line-height:1.4;margin-bottom:10px;">
-                Selezioniamo
-                solo pazienti coerenti con trattamenti ad alto valore.</p>
-              <p style="font-size:14px;color:var(--muted);line-height:1.7;">Attiviamo campagne che selezionano solo
-                pazienti coerenti con trattamenti ad alto valore (implantologia, faccette, ortodonzia, filler ecc...)
-              </p>
-            </div>
-
-            <div
-              style="background:white;border:1px solid var(--border);border-radius:12px;padding:32px 28px;border-left:3px solid var(--blue);">
-              <div
-                style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">
-                03 — Qualificazione Invisibile</div>
-              <p style="font-size:17px;font-weight:600;color:var(--ink);line-height:1.4;margin-bottom:10px;">Il paziente
-                viene preparato prima del contatto diretto.</p>
-              <p style="font-size:14px;color:var(--muted);line-height:1.7;">Filtriamo e pre-condizioniamo ogni paziente,
-                riducendo attrito e obiezioni prima ancora che metta piede nel tuo studio.</p>
-            </div>
-
-            <div
-              style="background:white;border:1px solid var(--border);border-radius:12px;padding:32px 28px;border-left:3px solid var(--teal);">
-              <div
-                style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:12px;">
-                04 — Conversione Clinica Guidata</div>
-              <p style="font-size:17px;font-weight:600;color:var(--ink);line-height:1.4;margin-bottom:10px;">Arriva in
-                studio già predisposto.</p>
-              <p style="font-size:14px;color:var(--muted);line-height:1.7;">Il risultato è un aumento drastico
-                dell'accettazione dei piani di cura e del valore medio per paziente — senza che tu debba fare nulla di
-                diverso.</p>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- micro-section -->
-    <div style="background:var(--ink);padding:32px 48px;">
-      <div style="max-width:1080px;margin:0 auto;">
-        <p
-          style="font-size:15px;font-weight:500;color:rgba(255,255,255,0.55);line-height:1.7;text-align:center;letter-spacing:0.2px;">
-          Ogni fase è progettata per eliminare una delle principali inefficienze del marketing odontoiatrico
-          tradizionale.
-        </p>
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════
-     SOCIAL PROOF
-════════════════════════════════ -->
-    <section class="proof-section" id="risultati">
-      <div class="section-inner">
-
+    <section class="proof-section section-shell" id="risultati">
+      <div class="section-index" aria-hidden="true">03</div>
+      <header class="proof-header reveal">
         <span class="eyebrow">Risultati reali</span>
         <h2 class="section-title">Chi l'ha fatto<br>prima di te.</h2>
+        <p class="proof-intro">Numeri, contesto e risultati. Senza metriche decorative.</p>
+      </header>
 
-        <div class="proof-grid fade-up">
+      <div class="proof-ledger reveal">
+        <article class="testimonial testimonial-primary">
+          <div class="testimonial-meta"><span>01 / Milano</span><span class="review-stars" aria-label="Cinque stelle">★★★★★</span></div>
+          <blockquote>"Avevo già bruciato budget con due agenzie diverse. In 60 giorni con il sistema ho avuto 27 nuovi pazienti implantari. Per la prima volta so esattamente da dove arrivano."</blockquote>
+          <footer><div><strong>Dr. Marco Ricci</strong><span>Studio Ricci · Milano · Percorso A</span></div><b>+27 pazienti implantari in 60 giorni · (prima: agenda semi-vuota)</b></footer>
+        </article>
 
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">"Avevo già bruciato budget con due agenzie diverse. In 60 giorni con il sistema ho
-              avuto 27 nuovi pazienti implantari. Per la prima volta so esattamente da dove arrivano."</p>
-            <div class="review-author">
-              <div class="review-avatar">MR</div>
-              <div>
-                <div class="review-name">Dr. Marco Ricci</div>
-                <div class="review-role">Studio Ricci · Milano · Percorso A</div>
-              </div>
-            </div>
-            <div class="review-result">+27 pazienti implantari in 60 giorni · (prima: agenda semi-vuota)</div>
-          </div>
+        <article class="case-card">
+          <div class="case-kicker">Caso prima / dopo</div>
+          <div class="case-values"><div><span>Prima</span><strong>60k</strong><small>/mese</small></div><span class="case-arrow" aria-hidden="true">→</span><div><span>Dopo</span><strong>92k</strong><small>/mese</small></div></div>
+          <b>da 60k a 92k/mese in 120 giorni</b>
+          <p>Studio odontoiatrico · Nord Italia · Percorso A</p>
+        </article>
 
-          <!-- VIDEO PLACEHOLDER 1 -->
-          <div class="video-card" onclick="alert('Video testimonianza — da integrare')">
-            <div class="video-bg-text">IDS</div>
-            <div class="play-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--ink)" stroke="none">
-                <polygon points="5,3 19,12 5,21" />
-              </svg>
-            </div>
-            <div class="video-label">Dr.ssa Marchetti — Roma · Guarda la storia</div>
-          </div>
+        <article class="testimonial testimonial-secondary">
+          <div class="testimonial-meta"><span>02 / Torino</span><span class="review-stars" aria-label="Cinque stelle">★★★★★</span></div>
+          <blockquote>"Ho aperto da zero. In 8 settimane avevo 34 pazienti attivi e un flusso di cassa stabile. Ora sono passato al percorso A. Non avrei potuto costruire un sistema così da solo."</blockquote>
+          <footer><div><strong>Dr. Giuseppe Ferrari</strong><span>Studio Ferrari · Torino · Percorso B → A</span></div><b>34 pazienti attivi in 55 giorni · (prima: studio appena aperto)</b></footer>
+        </article>
 
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">"Ho aperto da zero. In 8 settimane avevo 34 pazienti attivi e un flusso di cassa
-              stabile. Ora sono passato al percorso A. Non avrei potuto costruire un sistema così da solo."</p>
-            <div class="review-author">
-              <div class="review-avatar">GF</div>
-              <div>
-                <div class="review-name">Dr. Giuseppe Ferrari</div>
-                <div class="review-role">Studio Ferrari · Torino · Percorso B → A</div>
-              </div>
-            </div>
-            <div class="review-result">34 pazienti attivi in 55 giorni · (prima: studio appena aperto)</div>
-          </div>
-
-          <!-- BEFORE/AFTER CARD -->
-          <div class="review-card" style="border:1px solid var(--border);background:white;">
-            <div
-              style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:18px;">
-              Caso prima / dopo</div>
-            <div style="display:flex;align-items:center;gap:0;margin-bottom:16px;">
-              <div style="flex:1;background:var(--gray);border-radius:8px;padding:16px;text-align:center;">
-                <div
-                  style="font-size:11px;font-weight:600;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">
-                  Prima</div>
-                <div
-                  style="font-family:'Fraunces',serif;font-size:28px;font-weight:600;color:var(--muted);line-height:1;">
-                  60k</div>
-                <div style="font-size:11px;color:var(--muted);margin-top:4px;">/mese</div>
-              </div>
-              <div style="padding:0 12px;font-size:20px;color:var(--border);">→</div>
-              <div
-                style="flex:1;background:var(--blue-soft);border:1px solid rgba(16,85,182,0.2);border-radius:8px;padding:16px;text-align:center;">
-                <div
-                  style="font-size:11px;font-weight:600;color:var(--blue);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">
-                  Dopo</div>
-                <div
-                  style="font-family:'Fraunces',serif;font-size:28px;font-weight:600;color:var(--blue);line-height:1;">
-                  92k</div>
-                <div style="font-size:11px;color:var(--blue);margin-top:4px;">/mese</div>
-              </div>
-            </div>
-            <div class="review-result" style="margin-top:0;">da 60k a 92k/mese in 120 giorni</div>
-            <div style="margin-top:14px;font-size:13px;color:var(--muted);">Studio odontoiatrico · Nord Italia ·
-              Percorso
-              A</div>
-          </div>
-
-          <!-- VIDEO PLACEHOLDER 2 -->
-          <div class="video-card" onclick="alert('Video testimonianza — da integrare')">
-            <div class="video-bg-text">IDS</div>
-            <div class="play-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--ink)" stroke="none">
-                <polygon points="5,3 19,12 5,21" />
-              </svg>
-            </div>
-            <div class="video-label">Dr. Conti — Bologna · Guarda la storia</div>
-          </div>
-
+        <div class="story-index" aria-label="Altre storie dal sistema">
+          <div><span>03 / Roma</span><strong>Dr.ssa Marchetti — Roma · Guarda la storia</strong></div>
+          <div><span>04 / Bologna</span><strong>Dr. Conti — Bologna · Guarda la storia</strong></div>
         </div>
-
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-     2nd CTA
-════════════════════════════════ -->
     <section class="cta-section">
-      <div class="cta-bg"></div>
-      <div class="cta-inner fade-up">
-        <h2 class="cta-title">
-          Scopri se il tuo studio può<br>generare nuovi pazienti<br><em>nei prossimi 30 giorni.</em>
-        </h2>
-        <a href="#contatto" class="hero-cta" style="display:inline-flex;margin-top:8px;">
-          Richiedi un'analisi gratuita del tuo studio
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
-        <p style="margin-top:22px;font-size:15px;font-weight:600;color:rgba(255,255,255,0.45);letter-spacing:0.2px;">
-          Accettiamo un numero limitato di studi per area geografica.
-        </p>
+      <div class="cta-orbit" aria-hidden="true"><svg viewBox="0 0 500 500"><circle cx="250" cy="250" r="190" /><circle cx="250" cy="250" r="125" /><path d="M76 320c103-98 232-149 348-132" /></svg></div>
+      <div class="cta-inner reveal">
+        <span class="eyebrow eyebrow-light">Prossimo passo</span>
+        <h2 class="cta-title">Scopri se il tuo studio può<br>generare nuovi pazienti<br><em>nei prossimi 30 giorni.</em></h2>
+        <a href="#contatto" class="button button-primary button-large">Richiedi un'analisi gratuita del tuo studio <span aria-hidden="true">↘</span></a>
+        <p>Accettiamo un numero limitato di studi per area geografica.</p>
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-     FORM
-════════════════════════════════ -->
     <section class="form-section" id="contatto">
-      <div class="form-inner">
-        <span class="eyebrow" style="display:block;text-align:center;">Analisi gratuita del tuo studio</span>
-        <h2 class="section-title" style="text-align:center;margin-bottom:12px;">20 minuti.<br>Nessun impegno.</h2>
-        <p class="section-body" style="text-align:center;margin-bottom:40px;">
-          Analizziamo il tuo studio, identifichiamo il percorso giusto
-          e ti diciamo esattamente quanti pazienti puoi acquisire
-          ogni mese — con dati concreti e misurabili.
-        </p>
-
-        <form action="https://formslist.com/f/KGJrMdvT8ZfQ" method="POST" class="form-card">
-          <input type="hidden" name="situazione" id="situazione_input" value="core">
-          <div class="form-row">
-            <label class="form-label">Qual è la tua situazione?</label>
-            <div class="form-radio-group" id="pathGroup">
-              <div class="form-radio active-core" id="radio-core" onclick="selectPath('core')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-                  <polyline points="16 7 22 7 22 13" />
-                </svg>
-                Studio avviato
-              </div>
-              <div class="form-radio" id="radio-launch" onclick="selectPath('launch')">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="12" y1="8" x2="12" y2="16" />
-                  <line x1="8" y1="12" x2="16" y2="12" />
-                </svg>
-                Studio nuovo
-              </div>
-            </div>
-          </div>
-          <div class="form-row">
-            <label class="form-label">Nome e Cognome</label>
-            <input class="form-input" type="text" name="nome" placeholder="Dr. Mario Rossi" required>
-          </div>
-          <div class="form-row">
-            <label class="form-label">Email</label>
-            <input class="form-input" type="email" name="email" placeholder="mario@studio.it" required>
-          </div>
-          <div class="form-row">
-            <label class="form-label">Telefono</label>
-            <input class="form-input" type="tel" name="telefono" placeholder="+39 333 000 0000" required>
-          </div>
-          <div class="form-row">
-            <label class="form-label">Città dello studio</label>
-            <input class="form-input" type="text" name="citta" placeholder="Milano" required>
-          </div>
-          <button type="submit" class="form-submit" onclick="handleSubmit()">
-            Richiedi un'analisi gratuita del tuo studio →
-          </button>
-          <div class="form-note">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-            Risposta entro 2 ore · Accettiamo un numero limitato di studi per area
-          </div>
-        </form>
-
+      <div class="form-intro reveal">
+        <span class="eyebrow">Analisi gratuita del tuo studio</span>
+        <h2 class="section-title">20 minuti.<br>Nessun impegno.</h2>
+        <p class="section-body">Analizziamo il tuo studio, identifichiamo il percorso giusto e ti diciamo esattamente quanti pazienti puoi acquisire ogni mese — con dati concreti e misurabili.</p>
       </div>
+
+      <form action="https://formslist.com/f/KGJrMdvT8ZfQ" method="POST" class="form-card reveal">
+        <input type="hidden" name="situazione" id="situazione_input" value="core">
+        <fieldset class="form-row">
+          <legend class="form-label">Qual è la tua situazione?</legend>
+          <div class="form-radio-group" id="pathGroup">
+            <button class="form-radio active-core" id="radio-core" type="button" data-path="core" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>Studio avviato</button>
+            <button class="form-radio" id="radio-launch" type="button" data-path="launch" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="8" y1="12" x2="16" y2="12" /></svg>Studio nuovo</button>
+          </div>
+        </fieldset>
+        <div class="form-fields">
+          <div class="form-row"><label class="form-label" for="nome">Nome e Cognome</label><input class="form-input" id="nome" type="text" name="nome" placeholder="Dr. Mario Rossi" required></div>
+          <div class="form-row"><label class="form-label" for="email">Email</label><input class="form-input" id="email" type="email" name="email" placeholder="mario@studio.it" required></div>
+          <div class="form-row"><label class="form-label" for="telefono">Telefono</label><input class="form-input" id="telefono" type="tel" name="telefono" placeholder="+39 333 000 0000" required></div>
+          <div class="form-row"><label class="form-label" for="citta">Città dello studio</label><input class="form-input" id="citta" type="text" name="citta" placeholder="Milano" required></div>
+        </div>
+        <button type="submit" class="form-submit"><span>Richiedi un'analisi gratuita del tuo studio</span><span aria-hidden="true">→</span></button>
+        <div class="form-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>Risposta entro 2 ore · Accettiamo un numero limitato di studi per area</div>
+      </form>
     </section>
+  </main>
 
-  </div><!-- /main-site -->
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">Implexo<em> Dental System</em></div>
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="#home" aria-label="Implexo Dental System — Torna all'inizio">
+      <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true"><path d="M7 14.5c4.8-5 9.8-7.5 15-7.5s10.2 2.5 15 7.5" /><path d="M10 20.5c3.8 10.8 7.8 16.2 12 16.2s8.2-5.4 12-16.2" /><path d="M22 7v29.7" /></svg>
+      <span class="brand-copy"><strong>Implexo</strong><span>Dental System</span></span>
+    </a>
     <p>© 2025 Implexo Dental System Srl · <a href="#">Privacy</a> · <a href="#">Termini</a> · GDPR compliant</p>
   </footer>
 
   <script>
-    /* ── PATH SELECTION ── */
-    let selectedPath = 'core';
-    function selectPath(path) {
-      selectedPath = path;
-      const inputSit = document.getElementById('situazione_input');
-      if (inputSit) inputSit.value = path;
-      const rc = document.getElementById('radio-core');
-      const rl = document.getElementById('radio-launch');
-      rc.className = 'form-radio' + (path === 'core' ? ' active-core' : '');
-      rl.className = 'form-radio' + (path === 'launch' ? ' active-launch' : '');
-      setTimeout(() => {
-        document.getElementById('contatto').scrollIntoView({ behavior: 'smooth' });
-      }, 80);
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function setMenu(open) {
+      hamburger.classList.toggle('open', open);
+      mobileMenu.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+      hamburger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+      mobileMenu.setAttribute('aria-hidden', String(!open));
     }
 
-    /* ── FORM SUBMIT ── */
-    function handleSubmit() {
-      const btn = document.querySelector('.form-submit');
-      if (btn) {
-        btn.textContent = '✓ Inviando...';
-        btn.style.background = 'var(--green)';
-      }
-    }
-
-    /* ── SCROLL ANIMATIONS ── */
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
-
-    /* ── MOBILE MENU ── */
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      const ham = document.getElementById('hamburger');
-      menu.classList.toggle('open');
-      ham.classList.toggle('open');
-    }
-    function closeMobileMenu() {
-      document.getElementById('mobileMenu').classList.remove('open');
-      document.getElementById('hamburger').classList.remove('open');
-    }
-    document.addEventListener('click', function (e) {
-      const menu = document.getElementById('mobileMenu');
-      const ham = document.getElementById('hamburger');
-      if (!menu.contains(e.target) && !ham.contains(e.target)) {
-        menu.classList.remove('open');
-        ham.classList.remove('open');
+    hamburger.addEventListener('click', () => setMenu(hamburger.getAttribute('aria-expanded') !== 'true'));
+    mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('click', (event) => {
+      if (!mobileMenu.contains(event.target) && !hamburger.contains(event.target)) setMenu(false);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        setMenu(false);
+        hamburger.focus();
       }
     });
+
+    function selectPath(path, scrollToForm = false) {
+      const input = document.getElementById('situazione_input');
+      const core = document.getElementById('radio-core');
+      const launch = document.getElementById('radio-launch');
+      const isCore = path === 'core';
+      input.value = isCore ? 'core' : 'launch';
+      core.classList.toggle('active-core', isCore);
+      launch.classList.toggle('active-launch', !isCore);
+      core.setAttribute('aria-pressed', String(isCore));
+      launch.setAttribute('aria-pressed', String(!isCore));
+      if (scrollToForm) window.setTimeout(() => document.getElementById('contatto').scrollIntoView({ behavior: 'smooth' }), 80);
+    }
+
+    document.querySelectorAll('[data-path]').forEach((control) => {
+      control.addEventListener('click', () => selectPath(control.dataset.path, control.classList.contains('path-select')));
+    });
+
+    const form = document.querySelector('.form-card');
+    form.addEventListener('submit', () => {
+      const button = form.querySelector('.form-submit');
+      button.classList.add('is-sending');
+      button.querySelector('span:first-child').textContent = '✓ Inviando...';
+    });
+
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+      reveals.forEach((element) => observer.observe(element));
+    } else {
+      reveals.forEach((element) => element.classList.add('is-visible'));
+    }
   </script>
 </body>
 
