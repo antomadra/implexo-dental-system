@@ -63,6 +63,18 @@ test('editorial imagery has modern lightweight sources with PNG fallbacks', () =
   assert.equal((html.match(/type=["']image\/webp["']/g) || []).length, 2);
 });
 
+test('team credentials present academic mix without implying endorsement', () => {
+  assert.match(html, /class=["'][^"']*team-section/);
+  assert.match(html, /03 studenti/);
+  assert.match(html, /Odontoiatria e Protesi Dentaria/);
+  assert.match(html, /01 studente[\s\S]*Ingegneria Informatica/);
+  assert.match(html, /01 studente[\s\S]*>Design</);
+  assert.match(html, /Università degli Studi di Milano/);
+  assert.match(html, /Politecnico di Milano/);
+  assert.match(html, /non è affiliata, patrocinata o approvata/);
+  assert.doesNotMatch(html, /assets\/(?:unimi|polimi).*\.(?:svg|png|webp)/i);
+});
+
 test('navigation and motion have accessible progressive enhancement', () => {
   assert.match(html, /id=["']hamburger["'][^>]*aria-expanded=["']false["']/s);
   assert.match(html, /aria-controls=["']mobileMenu["']/);
