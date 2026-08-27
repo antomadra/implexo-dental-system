@@ -1988,7 +1988,7 @@ html.js .reveal.is-visible {
 
   .team-institution {
     grid-column: 2 / -1;
-    margin-top: -25px;
+    margin-top: 2px;
     padding-right: 82px;
   }
 

@@ -73,6 +73,7 @@ test('team credentials present academic mix without implying endorsement', () =>
   assert.match(html, /Politecnico di Milano/);
   assert.match(html, /non è affiliata, patrocinata o approvata/);
   assert.doesNotMatch(html, /assets\/(?:unimi|polimi).*\.(?:svg|png|webp)/i);
+  assert.doesNotMatch(css, /\.team-institution\s*\{[^}]*margin-top:\s*-/s);
 });
 
 test('navigation and motion have accessible progressive enhancement', () => {
