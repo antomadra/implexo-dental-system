@@ -32,6 +32,9 @@ test('the existing core copy and conversion contract remain intact', () => {
   assert.match(html, /action=["']https:\/\/formslist\.com\/f\/KGJrMdvT8ZfQ["']/);
   assert.match(html, /name=["']situazione["']/);
   assert.match(html, /name=["']email["'][^>]*required/);
+  assert.match(html, /01 —<\/span><div><h3>Dominio Territoriale Strategico<\/h3>/);
+  assert.match(html, />MR<\/span>/);
+  assert.match(html, />GF<\/span>/);
 });
 
 test('the redesigned site uses installed editorial imagery', () => {
@@ -44,6 +47,20 @@ test('the redesigned site uses installed editorial imagery', () => {
     assert.equal(existsSync(join(root, asset)), true, `${asset} should exist`);
     assert.match(html, new RegExp(asset.replaceAll('/', '\\/')));
   }
+});
+
+test('editorial imagery has modern lightweight sources with PNG fallbacks', () => {
+  const sources = [
+    'assets/implexo-clinic-editorial.webp',
+    'assets/implexo-system-abstract.webp',
+  ];
+
+  for (const source of sources) {
+    assert.equal(existsSync(join(root, source)), true, `${source} should exist`);
+    assert.match(html, new RegExp(`srcset=["']${source.replaceAll('/', '\\/')}["']`));
+  }
+
+  assert.equal((html.match(/type=["']image\/webp["']/g) || []).length, 2);
 });
 
 test('navigation and motion have accessible progressive enhancement', () => {
