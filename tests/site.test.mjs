@@ -8,6 +8,52 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const html = readFileSync(join(root, 'index.html'), 'utf8');
 const css = readFileSync(join(root, 'style.css'), 'utf8');
 
+test('the private collaboration route has a complete free-pilot narrative', () => {
+  const pagePath = join(root, 'collaborazione.html');
+  const pageCssPath = join(root, 'collaborazione.css');
+  assert.equal(existsSync(pagePath), true, 'collaborazione.html should exist');
+  assert.equal(existsSync(pageCssPath), true, 'collaborazione.css should exist');
+
+  const page = readFileSync(pagePath, 'utf8');
+  const pageCss = readFileSync(pageCssPath, 'utf8');
+  const requiredCopy = [
+    'collaborazione pilota',
+    'nessuna fee',
+    'otto settimane',
+    'budget pubblicitario',
+    'Università degli Studi di Milano',
+    'Politecnico di Milano',
+    'Campagne',
+    'Qualifica',
+    'Agenda',
+    'Parliamone',
+  ];
+
+  for (const text of requiredCopy) assert.match(page, new RegExp(text, 'i'));
+  assert.match(page, /href=["']mailto:antonio@implexodental\.com/);
+  assert.match(page, /collaborazione\.css/);
+  assert.match(pageCss, /@media\s*\(max-width:/);
+  assert.match(pageCss, /prefers-reduced-motion/);
+});
+
+test('the private route behaves like a concise presentation, not a public site page', () => {
+  const page = readFileSync(join(root, 'collaborazione.html'), 'utf8');
+  const pageCss = readFileSync(join(root, 'collaborazione.css'), 'utf8');
+
+  assert.equal((page.match(/<section[^>]+class=["'][^"']*\bslide\b/g) || []).length, 5);
+  assert.match(page, /class=["'][^"']*deck-progress/);
+  assert.match(page, /new IntersectionObserver/);
+  assert.match(page, /aria-label=["']Navigazione presentazione["']/);
+  assert.doesNotMatch(page, /href=["'](?:\.\/)?index\.html/);
+  assert.doesNotMatch(page, /<nav[^>]+aria-label=["']Navigazione principale/i);
+  assert.match(pageCss, /scroll-snap-type:\s*y\s+mandatory/);
+  assert.match(pageCss, /\.slide\.is-visible/);
+});
+
+test('the collaboration route stays outside the public navigation', () => {
+  assert.doesNotMatch(html, /href=["'](?:\.\/)?collaborazione\.html/);
+});
+
 test('the public site no longer exposes the private studio area', () => {
   assert.equal(existsSync(join(root, 'studio.html')), false);
   assert.doesNotMatch(html, /Il mio studio/i);
@@ -22,9 +68,6 @@ test('the existing core copy and conversion contract remain intact', () => {
     'Ti riconosci',
     'Due punti di accesso, un sistema',
     'Questo è ciò',
-    "Chi l'ha fatto",
-    'Dr. Marco Ricci',
-    'Dr. Giuseppe Ferrari',
     "Richiedi un'analisi gratuita del tuo studio",
   ];
 
@@ -33,8 +76,30 @@ test('the existing core copy and conversion contract remain intact', () => {
   assert.match(html, /name=["']situazione["']/);
   assert.match(html, /name=["']email["'][^>]*required/);
   assert.match(html, /01 —<\/span><div><h3>Dominio Territoriale Strategico<\/h3>/);
-  assert.match(html, />MR<\/span>/);
-  assert.match(html, />GF<\/span>/);
+});
+
+test('the public site contains no invented testimonials or numerical social proof', () => {
+  const inventedClaims = [
+    /340\s*<span>\+<\/span>/i,
+    /47<\/div>[\s\S]*Studi nati con noi/i,
+    /38\s*<span>%<\/span>/i,
+    /fatturato del 38%/i,
+    /Dr\. Marco Ricci/i,
+    /Dr\. Giuseppe Ferrari/i,
+    /Dr\.ssa Marchetti/i,
+    /Dr\. Conti/i,
+    /60k[\s\S]*92k/i,
+    /27 nuovi pazienti implantari/i,
+    /34 pazienti attivi/i,
+    /Risultati reali/i,
+    /Chi l'ha fatto/i,
+    /Fattelo dire da chi lo ha già provato/i,
+    /nei prossimi 30 giorni/i,
+    /esattamente quanti pazienti puoi acquisire/i,
+    /Risposta entro 2 ore/i,
+  ];
+
+  for (const claim of inventedClaims) assert.doesNotMatch(html, claim);
 });
 
 test('the redesigned site uses installed editorial imagery', () => {
